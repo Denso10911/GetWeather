@@ -1,0 +1,13 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fffffe;
+    background-color: #0f0e17;
+    font-family: Trebuchet, sans-serif;
+}
+
+body a {
+    color: #fffffe;
+    text-decoration: none;    
+}

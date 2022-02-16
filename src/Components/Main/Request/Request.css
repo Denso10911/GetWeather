@@ -1,0 +1,26 @@
+.request {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.request__input input {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    
+}
+
+.request__button button{
+    color: #fffffe;
+    background-color: #ff8906;
+    border: none;    
+    border-radius: 20px;
+    padding: 5px;
+    width: 50px;
+
+}

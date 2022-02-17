@@ -1,24 +1,15 @@
 import React, { useState } from "react";
+import './Result.css'
+import ResultItems from "./ResultItems/ResultItems";
 
-const Result = (props) => {
-    let date = new Date(props.cityInfo.dt * 1000)
-    let options ={
-        year: 'numeric',
-        day: 'numeric',
-        weekday: 'long',
-        month: 'long',
-
-    }
-    console.log(date.getFullYear() )
+const Result = (props) => {    
 
     return (
         <div className="result">
-            <div className="result__city">
-                {props.cityInfo.name}
-            </div>
-            <div className="result__data">
-                 {date.toLocaleString('en', options)}
-            </div>
+            <h1 className="result__city">
+                {props.cityInfo.city.name}
+            </h1>
+            <ResultItems cityInfo={props.cityInfo}/>            
         </div>
     )
 }

@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import cl from './App.module.css';
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 
 function App() {
+  const [forecastType, setforecastType] = useState(true)
+  console.log(forecastType);
+
+
+
   return (
     <div className={cl.App}>
-       <Header />
-       <Main />
+       <Header forecastType={forecastType} setforecastType={setforecastType}/>
+       <Main forecastType={forecastType}/>
     </div>
   );
 }

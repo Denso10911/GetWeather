@@ -1,7 +1,15 @@
 import React from "react";
 import cl from './Header.module.css'
+import './ForecastType.css'
 
-const Header = () => {
+const Header = (props) => {
+
+  
+
+  const handleClick = (e) => {
+    e.target.innerHTML == 'Daily' ? props.setforecastType(true) :  props.setforecastType(false)
+  }
+
     return (
       <div className={cl.header}>
         <div className={cl.logo}>
@@ -10,12 +18,12 @@ const Header = () => {
             </a>            
         </div>
         <div className="menu">
-          <ul className={cl.menu__list}>
-            <li className={cl.menu__item}>
-              <a href='/daily'>Daily</a>
+          <ul className={cl.menu__list} onClick={(e)=>{handleClick(e)}}>
+            <li className={`menu__item ${props.forecastType && 'active'}`}>
+               <button href='/daily'>Daily</button>
             </li>
-            <li className="menu__item">
-              <a href ='/week'>Week</a>
+            <li className={`menu__item ${!props.forecastType && 'active'}`}>
+              <button href ='/week'>Week</button>
             </li>
           </ul>
         </div>

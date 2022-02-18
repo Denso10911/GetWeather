@@ -12,7 +12,7 @@ const Request = (props) => {
     const getCityRequest = async (cityNameInput) => {
         setCityNameInput('')
         let responseLoc = await axios
-            .get(`http://api.openweathermap.org/geo/1.0/direct?q=${cityNameInput}&limit=1&appid=5421867f9d50d00be45654af1ffcc8f4`)
+            .get(`https://api.openweathermap.org/geo/1.0/direct?q=${cityNameInput}&limit=1&appid=5421867f9d50d00be45654af1ffcc8f4`)
             
         props.setCityName(responseLoc.data[0].name)
         let responseWeather = await axios

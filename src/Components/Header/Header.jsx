@@ -2,8 +2,7 @@ import React from "react";
 import cl from './Header.module.css'
 import './ForecastType.css'
 
-const Header = (props) => {
-
+const Header = (props) => {   
   
 
   const handleClick = (e) => {

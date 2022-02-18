@@ -7,7 +7,7 @@ const Header = (props) => {
   
 
   const handleClick = (e) => {
-    e.target.innerHTML == 'Daily' ? props.setforecastType(true) :  props.setforecastType(false)
+    e.target.innerHTML === 'Daily' ? props.setforecastType(true) :  props.setforecastType(false)
   }
 
     return (

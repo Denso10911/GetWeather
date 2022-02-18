@@ -5,9 +5,6 @@ import Main from "./Components/Main/Main";
 
 function App() {
   const [forecastType, setforecastType] = useState(true)
-  console.log(forecastType);
-
-
 
   return (
     <div className={cl.App}>

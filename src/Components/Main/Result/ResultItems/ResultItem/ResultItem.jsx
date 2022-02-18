@@ -1,32 +1,36 @@
+import moment from "moment";
 import React from "react";
 
 
 const ResultItem = (props) => {
 
-    let date = new Date(props.day.dt * 1000)
-    let options ={
-        year: 'numeric',
-        day: 'numeric',
-        weekday: 'long',
-        month: 'long',
-    }    
+    console.log(moment(props.day.dt).format('dddd Do MMMM'));
+
+    let date = props.day.dt * 1000      
     let weather = props.day.weather[0]
-    let temp = props.day.main
+    let temp = props.day.temp.day
+    let feels_like = props.day.feels_like.day
 
     return (
             <>
                 <div className="result__data">
-                    {date.toLocaleString('en', options)}
+                    <span>
+                        {moment(date).format('dddd')}
+                    </span>
+                    <br/> 
+                    <span>
+                        {moment(date).format(' D MMMM')}
+                    </span>
                 </div>
                 <div className="result__information">
                     <div className="result__temperature">
                         <div className="result__temperature_now">
-                            {`${Math.round(temp.temp)} °C`}
+                            {`${Math.round(temp)} °C`}
                         </div>
                         <div className="result__temperature_feels">
                             <p>Feels like</p>
                             <p>
-                                {`${Math.round(temp.feels_like)} °C`}
+                                {`${Math.round(feels_like)} °C`}
                             </p>
                         </div>
                     </div>       

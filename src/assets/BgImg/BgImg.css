@@ -1,0 +1,23 @@
+.bgImg {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Rain {
+  transition: all 5s ease;
+  background-image: url(./Rain.jpg);
+}
+.Clouds {
+  transition: all 1s ease;
+  background-image: url(./Clouds.jpg);
+}
+.Snow {
+  transition: all 1s ease;
+  background-image: url(./Snowing.jpeg);
+}
+.Clear {
+  transition: all 1s ease;
+  background-image: url(./Sun.jpg);
+}

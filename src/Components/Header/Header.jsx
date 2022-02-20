@@ -2,14 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props);
   return (
     <div className='header'>
-      <div className='logo'>
-        <NavLink to='/'>GetWeather</NavLink>
+      <div className={props.forecastType ? "fullScreenLogo" : "logo"}>
+        <NavLink to='GetWeather'>GetWeather</NavLink>
       </div>
       <div className='menu'>
-        <NavLink to='/' className='menu__item'>
+        <NavLink to='GetWeather' className='menu__item'>
           Daily
         </NavLink>
         <NavLink to='week' className='menu__item'>

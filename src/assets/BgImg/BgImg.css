@@ -4,20 +4,62 @@
   width: 100%;
   height: 100%;
 }
-
-.Rain {
-  transition: all 5s ease;
+.Rain::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(2px); /* Размытие */
   background-image: url(./Rain.jpg);
+  transition: all 1s ease;
 }
-.Clouds {
+
+.Clouds::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(2px); /* Размытие */
   transition: all 1s ease;
   background-image: url(./Clouds.jpg);
 }
-.Snow {
+.Snow::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(2px); /* Размытие */
   transition: all 1s ease;
   background-image: url(./Snowing.jpeg);
 }
-.Clear {
+.Clear::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(2px); /* Размытие */
   transition: all 1s ease;
   background-image: url(./Sun.jpg);
+}
+
+.line {
+  position: absolute;
+  width: 450px;
+  height: 1700px;
+  left: 400px;
+  bottom: -300px;
+  background-color: rgba(255, 255, 255, 0.39);
+  transform: rotate(-25deg);
 }

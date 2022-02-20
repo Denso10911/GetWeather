@@ -1,0 +1,12 @@
+.result__day_temp {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.time {
+  width: 280px;
+}

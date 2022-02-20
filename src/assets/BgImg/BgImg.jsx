@@ -6,7 +6,12 @@ const BgImg = (props) => {
 
   props.cityInfo ? (main = props.cityInfo[0].weather[0].main) : (main = null);
 
-  return <div className={`bgImg ${main}`}>{props.children}</div>;
+  return (
+    <div className={`bgImg ${main}`}>
+      <div className='line'></div>
+      {props.children}
+    </div>
+  );
 };
 
 export default BgImg;

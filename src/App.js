@@ -12,8 +12,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className={cl.App}>
-        <Header forecastType={forecastType} setforecastType={setforecastType} />
-        <Main forecastType={forecastType} />
+        <Header forecastType={forecastType} />
+        <Main setforecastType={setforecastType} />
       </div>
     </BrowserRouter>
   );

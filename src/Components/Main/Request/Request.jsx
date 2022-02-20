@@ -19,6 +19,7 @@ const Request = (props) => {
             responseLoc.data[0].lon
           );
           props.setCityInfo(responseWeather.data);
+          props.setforecastType(false);
           resetForm();
         }}
       >

@@ -1,3 +1,10 @@
 .result__city {
-    text-align: center;
+  text-align: center;
+  font-size: 75px;
+  text-shadow: 0 0 5px #000;
+  margin: 30px 0 15px;
+  background-color: rgba(22, 27, 34, 0.719);
+  padding: 10px;
+  position: relative;
+  z-index: 1;
 }

@@ -3,7 +3,8 @@ body {
   padding: 0;
   color: #fffffe;
   background-color: rgb(13, 17, 23);
-  font-family: Trebuchet, sans-serif;
+  font-family: "Poiret One", cursive;
+  overflow-y: hidden;
 }
 
 body a {

@@ -1,0 +1,31 @@
+.result__weatherInfo {
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 280px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.result__weather {
+  height: 60px;
+  width: 100%;
+}
+
+.result__paragraph {
+  margin-top: 0;
+}
+
+.result__pressure {
+  align-self: flex-start;
+}
+
+.result__humidity {
+  align-self: flex-end;
+}

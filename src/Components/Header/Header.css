@@ -7,6 +7,15 @@
   height: 30px;
 }
 
+.fullScreenLogo a {
+  position: absolute;
+  transform: rotate(65deg);
+  font-size: 90px;
+  top: 320px;
+  left: 650px;
+  font-weight: bold;
+}
+
 .logo a {
   font-size: 20px;
   font-weight: bold;
@@ -17,7 +26,7 @@
 }
 .menu__item.active {
   transition: all 0.5s ease;
-  color: orange;
+  color: rgb(255, 166, 0);
 }
 
 .menu__item:hover {

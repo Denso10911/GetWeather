@@ -6,6 +6,8 @@
   background-color: rgb(53, 52, 52);
   padding: 8px;
   border-radius: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 .request__input {

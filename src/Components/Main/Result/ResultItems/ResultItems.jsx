@@ -1,5 +1,5 @@
 import React from "react";
-import ResultItem from "./ResultItem/ResultItem";
+import ResultIWeek from "./ResultIWeek/ResultIWeek";
 import "./ResultItems.css";
 
 const ResultItems = (props) => {
@@ -8,7 +8,7 @@ const ResultItems = (props) => {
       {props.weatherInfoDaily.map((day) => {
         return (
           <div className='resultItem' key={day.dt}>
-            <ResultItem day={day} />
+            <ResultIWeek day={day} />
           </div>
         );
       })}

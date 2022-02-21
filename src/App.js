@@ -8,12 +8,15 @@ import { faBolt } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [forecastType, setforecastType] = useState(true);
+  const [bgLineDeg, setbgLineDeg] = useState(true);
+
+  console.log(bgLineDeg);
 
   return (
     <BrowserRouter>
       <div className={cl.App}>
-        <Header forecastType={forecastType} />
-        <Main setforecastType={setforecastType} />
+        <Header forecastType={forecastType} setbgLineDeg={setbgLineDeg}/>
+        <Main setforecastType={setforecastType} bgLineDeg={bgLineDeg}/>
       </div>
     </BrowserRouter>
   );

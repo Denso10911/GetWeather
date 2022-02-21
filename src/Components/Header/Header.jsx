@@ -10,10 +10,13 @@ const Header = (props) => {
         <NavLink to='GetWeather'>GetWeather</NavLink>
       </div>
       <div className='menu'>
-        <NavLink to='GetWeather' className='menu__item'>
+        <NavLink to='GetWeather' className='menu__item' onClick={()=>{
+          props.setbgLineDeg(true)
+        }}>
           Daily
         </NavLink>
-        <NavLink to='week' className='menu__item'>
+        <NavLink to='week' className='menu__item' onClick={()=>{
+          props.setbgLineDeg(false)}}>
           Week
         </NavLink>
       </div>

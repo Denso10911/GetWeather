@@ -6,7 +6,7 @@ const WeatherNow = (props) => {
   let pressure = props.weatherAtTheMoment.pressure;
   let humidity = props.weatherAtTheMoment.humidity;
   let windSpeed = props.weatherAtTheMoment.wind_speed;
-  console.log(props);
+
   return (
     <div className='result__weatherInfo'>
       <div className='result__weather'>
@@ -19,7 +19,7 @@ const WeatherNow = (props) => {
       </div>
       <div className='result__pressure'>
         <p className='result__paragraph'>Pressure</p>
-        {pressure}
+        {`${pressure} hPa`}
       </div>
       <div className='result__humidity'>
         <p className='result__paragraph'>Humidity</p>
@@ -27,7 +27,7 @@ const WeatherNow = (props) => {
       </div>
       <div className='result__windSpeed'>
         <p className='result__paragraph'>Wind</p>
-        <div className='windSpeed'>{`${windSpeed} %`}</div>
+        <div className='windSpeed'>{`${windSpeed} m/s`}</div>
       </div>
     </div>
   );

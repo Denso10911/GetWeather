@@ -7,10 +7,9 @@ import BgImg from "../../assets/BgImg/BgImg";
 const Main = (props) => {
   const [cityName, setCityName] = useState("");
   const [cityInfo, setCityInfo] = useState("");
-  console.log(cityInfo);
 
   return (
-    <BgImg cityInfo={cityInfo.hourly}>
+    <BgImg cityInfo={cityInfo.hourly} bgLineDeg={props.bgLineDeg}>
       <div className='main'>
         <Request
           setCityInfo={setCityInfo}

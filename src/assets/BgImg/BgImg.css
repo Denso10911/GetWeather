@@ -14,7 +14,9 @@
   z-index: -1; /* Фон ниже текста */
   filter: blur(2px); /* Размытие */
   background-image: url(./Rain.jpg);
+  background-size: cover;
   transition: all 1s ease;
+  
 }
 
 .Clouds::before {
@@ -28,6 +30,7 @@
   filter: blur(2px); /* Размытие */
   transition: all 1s ease;
   background-image: url(./Clouds.jpg);
+  background-size: cover;
 }
 .Snow::before {
   content: "";
@@ -40,6 +43,7 @@
   filter: blur(2px); /* Размытие */
   transition: all 1s ease;
   background-image: url(./Snowing.jpeg);
+  background-size: cover;
 }
 .Clear::before {
   content: "";
@@ -52,14 +56,20 @@
   filter: blur(2px); /* Размытие */
   transition: all 1s ease;
   background-image: url(./Sun.jpg);
+  background-size: cover;
 }
 
 .line {
-  position: absolute;
-  width: 450px;
-  height: 1700px;
-  left: 400px;
-  bottom: -300px;
-  background-color: rgba(255, 255, 255, 0.39);
-  transform: rotate(-25deg);
+  position: fixed;  
+  background-color: rgba(255, 255, 255, 0.39); 
 }
+
+.daily {
+  width: 400px;
+  height: 3500px;
+  right: 8%;
+  top: -280px;
+  border-top: 5px solid #000;
+  transform: rotate(-25deg);  
+}
+ 

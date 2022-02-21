@@ -2,7 +2,6 @@ import React from "react";
 import "./Temperature.css";
 
 const Temperature = (props) => {
-  console.log(props);
   return (
     <div className='result__temp'>
       <div className='result__tempTitle'>°C</div>

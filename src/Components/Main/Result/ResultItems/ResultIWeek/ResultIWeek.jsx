@@ -1,7 +1,7 @@
 import moment from "moment";
 import React from "react";
 
-const ResultItem = (props) => {
+const ResultIWeek = (props) => {
   let date = props.day.dt * 1000;
   let weather = props.day.weather[0];
   let temp = props.day.temp.day;
@@ -36,4 +36,4 @@ const ResultItem = (props) => {
   );
 };
 
-export default ResultItem;
+export default ResultIWeek;

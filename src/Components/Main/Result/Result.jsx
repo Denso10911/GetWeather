@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./Result.css";
-import ResultDay from "./ResultItems/ResultDay/ResultDay";
-import ResultItems from "./ResultItems/ResultItems";
+import ResultDay from "./ResultDay/ResultDay";
+import ResultWeek from "./ResultWeek/ResultWeek";
 
 const Result = (props) => {
   let weatherInfoDailyOne = new Array(props.weatherInfoDaily[0]);
@@ -17,7 +17,7 @@ const Result = (props) => {
         />
         <Route
           path='week'
-          element={<ResultItems weatherInfoDaily={props.weatherInfoDaily} />}
+          element={<ResultWeek weatherInfoDaily={props.weatherInfoDaily} />}
         />
       </Routes>
     </div>

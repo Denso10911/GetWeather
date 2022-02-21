@@ -1,18 +1,18 @@
 import React from "react";
-import ResultIWeek from "./ResultIWeek/ResultIWeek";
-import "./ResultItems.css";
+import ResultDayOfWeek from "./ResultDayOfWeek/ResultDayOfWeek";
+import "./ResultWeek.css";
 
-const ResultItems = (props) => {
+const ResultWeek = (props) => {
   return (
     <div className='resultItems'>
       {props.weatherInfoDaily.map((day) => {
         return (
           <div className='resultItem' key={day.dt}>
-            <ResultIWeek day={day} />
+            <ResultDayOfWeek day={day} />
           </div>
         );
       })}
     </div>
   );
 };
-export default ResultItems;
+export default ResultWeek;

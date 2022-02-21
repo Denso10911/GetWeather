@@ -1,7 +1,9 @@
 import moment from "moment";
 import React from "react";
+import Temperature from "../../ResultDay/Tempereture/Temperature";
+import "./ResultDayOfWeek.css";
 
-const ResultIWeek = (props) => {
+const ResultDayOfWeek = (props) => {
   let date = props.day.dt * 1000;
   let weather = props.day.weather[0];
   let temp = props.day.temp.day;
@@ -9,21 +11,11 @@ const ResultIWeek = (props) => {
 
   return (
     <>
-      <div className='result__data'>
-        <span>{moment(date).format("dddd")}</span>
-        <br />
-        <span>{moment(date).format(" D MMMM")}</span>
-      </div>
       <div className='result__information'>
-        <div className='result__temperature'>
-          <div className='result__temperature_now'>
-            {`${Math.round(temp)} °C`}
-          </div>
-          <div className='result__temperature_feels'>
-            <p>Feels like</p>
-            <p>{`${Math.round(feels_like)} °C`}</p>
-          </div>
+        <div className='result__data'>
+          <span>{moment(date).format("dddd D")}</span>
         </div>
+        <Temperature temp={temp} feels_like={feels_like} />
         <div className='result__weatherIcon'>
           <img
             src={`http://openweathermap.org/img/wn/${weather.icon}.png`}
@@ -36,4 +28,4 @@ const ResultIWeek = (props) => {
   );
 };
 
-export default ResultIWeek;
+export default ResultDayOfWeek;

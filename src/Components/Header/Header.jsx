@@ -3,20 +3,16 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = (props) => {
-  console.log(props);
   return (
-    <div className='header'>
-      <div className={props.forecastType ? "fullScreenLogo" : "logo"}>
-        <NavLink to='GetWeather'>GetWeather</NavLink>
+    <div className={props.forecastType ? "firstStartHeader" : "header"}>
+      <div className={props.forecastType ? "firstStartLogo" : "logo"}>
+        <NavLink to='day'>GetWeather</NavLink>
       </div>
-      <div className='menu'>
-        <NavLink to='GetWeather' className='menu__item' onClick={()=>{
-          props.setbgLineDeg(true)
-        }}>
+      <div className={props.forecastType ? "firstStartMenu" : "menu"}>
+        <NavLink to='day' className='menu__item'>
           Daily
         </NavLink>
-        <NavLink to='week' className='menu__item' onClick={()=>{
-          props.setbgLineDeg(false)}}>
+        <NavLink to='week' className='menu__item' >
           Week
         </NavLink>
       </div>

@@ -1,12 +1,15 @@
 import React from "react";
-import "./Temperature.css";
 
 const Temperature = (props) => {
+let {temp, title, value, feels} = props.style
+
   return (
-    <div className='result__temp'>
-      <div className='result__tempTitle'>°C</div>
-      <div className='result__tempValue'>{`${Math.round(props.temp)}`}</div>
-      <div className='result__tempFeels'>
+    <div className={temp}>
+      <div className={value}>
+        {`${Math.round(props.temp)}`}
+        <span className={title}>°C</span>
+      </div>
+      <div className={feels}>
         Feels like {`${Math.round(props.feels_like)} °C`}
       </div>
     </div>

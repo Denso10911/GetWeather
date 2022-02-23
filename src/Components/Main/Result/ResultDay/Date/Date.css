@@ -1,9 +1,9 @@
 .result__day_data {
   text-align: center;
-  text-shadow: 0 0 5px #000;
   font-size: 25px;
-  font-weight: bold;
   position: relative;
   z-index: 1;
   color: #000;
+  margin-bottom: 15px;
+
 }

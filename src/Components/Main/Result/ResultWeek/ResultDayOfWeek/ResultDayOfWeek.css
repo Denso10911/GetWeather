@@ -8,6 +8,7 @@
   box-sizing: border-box;
   color: black;
   font-weight: bold;
+  
 }
 
 .result__data {
@@ -34,4 +35,9 @@
   padding: 0;
   margin: 0;
   font-size: 10px;
+}
+
+.result__weatherIcon {
+  display: flex;
+  align-items: center;
 }

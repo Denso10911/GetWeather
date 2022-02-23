@@ -4,6 +4,7 @@ import Temperature from "./Tempereture/Temperature";
 import Date from "./Date/Date";
 import WeatherNow from "./WeatherNow/WeatherNow";
 import WeatherTimeLapse from "./WeatherTimeLapse/WeatherTimeLapse";
+import style from './Tempereture/TempDay.module.css'
 
 const ResultDay = (props) => {
   let weatherAtTheMoment = props.weatherHourly[0];
@@ -15,9 +16,11 @@ const ResultDay = (props) => {
     <div className='result__day'>
       <Date date={date} />
       <div className='result__day_temp'>
-        <Temperature temp={temp} feels_like={feels_like} />
-        <WeatherNow weatherAtTheMoment={weatherAtTheMoment} />
-        <WeatherTimeLapse weatherHourly={props.weatherHourly}/>
+        <Temperature temp={temp} feels_like={feels_like} style={style}/>
+          <div className="result__day_params">
+             <WeatherNow weatherAtTheMoment={weatherAtTheMoment} />        
+             <WeatherTimeLapse weatherHourly={props.weatherHourly}/>
+          </div>       
       </div>
     </div>
   );

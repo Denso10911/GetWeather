@@ -3,16 +3,16 @@
 .weatherTimeLapse__item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    flex-direction: column;
+    gap: 5px;
     font-size: 20px;
     color: rgb(0, 0, 0);
-    font-weight: bold;
-    justify-content: flex-start;
 }
 
 .weatherTimeLapse__item_icon {
     background-color: rgba(0, 0, 0, 0.226);
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.226);
-
+    height: 50px;
+    width: 50px;
 }

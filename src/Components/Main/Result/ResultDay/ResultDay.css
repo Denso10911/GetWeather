@@ -1,17 +1,20 @@
 .result__day{
   color: rgb(0, 0, 0);
-  text-shadow: 0 0 5px #000;
 }
 
 .result__day_temp {
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   gap: 20px;
-  padding-top: 40px;
+  padding: 5px 40px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.459);
 }
 
-.time {
-  width: 280px;
+.result__day_params {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
 }

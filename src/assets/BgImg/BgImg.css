@@ -27,8 +27,8 @@
   top: 0;
   bottom: 0; /* Вся высота */
   z-index: -1; /* Фон ниже текста */
-  filter: blur(2px); /* Размытие */
-  transition: all 1s ease;
+  filter: blur(5px); /* Размытие */
+  /* transition: all 1s ease; */
   background-image: url(./Clouds.jpg);
   background-size: cover;
 }
@@ -65,11 +65,11 @@
 }
 
 .daily {
-  width: 400px;
-  height: 3500px;
-  right: 8%;
-  top: -280px;
+  width: 30vw;
+  height: 200vh;
+  right: 0;
+  top: -10vh;
   border-top: 5px solid #000;
-  transform: rotate(-25deg);  
+  transform: rotate(10deg);  
 }
  

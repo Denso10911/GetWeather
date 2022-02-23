@@ -5,14 +5,18 @@ import ResultDay from "./ResultDay/ResultDay";
 import ResultWeek from "./ResultWeek/ResultWeek";
 
 const Result = (props) => {
-  let weatherInfoDailyOne = new Array(props.weatherInfoDaily[0]);
 
   return (
     <div className='result'>
       <h1 className='result__city'>{props.cityName}</h1>
       <Routes>
+        <Route 
+          exact 
+          path='day'
+          element={<ResultDay weatherHourly={props.weatherInfoHourly} />}
+        />
         <Route
-          path='GetWeather'
+          path='day/:dt'
           element={<ResultDay weatherHourly={props.weatherInfoHourly} />}
         />
         <Route

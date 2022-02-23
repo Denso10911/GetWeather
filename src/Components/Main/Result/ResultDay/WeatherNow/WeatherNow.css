@@ -1,29 +1,23 @@
 .result__weatherInfo {
   text-align: center;
-  text-shadow: 0 0 5px #000;
   font-size: 25px;
-  font-weight: bold;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: 280px;
-  padding-bottom: 30px;
-  width: 30%;
+  justify-content: space-around;
+  padding: 30px 0;  
+  width: 100%;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
   color: rgb(0, 0, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.753);
 }
 
 .result__weather {
   height: 60px;
-  width: 100%;
   font-size: 35px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  
+  align-items: center;  
 }
 
 .result__weather img {
@@ -39,12 +33,7 @@
   margin: 0 0 10px 0;
 }
 
-.result__pressure {
-  align-self: flex-start;
-}
-
 .result__humidity {
-     display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: end;
 }

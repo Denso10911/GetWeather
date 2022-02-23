@@ -1,0 +1,26 @@
+.temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: bold; 
+}
+
+.title {
+  font-size: 30px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.value {
+  width: 100%;
+  font-size: 150px;
+  text-align: center;
+  color: rgb(255, 138, 29);
+}
+
+.feels {
+  text-align: right;
+  align-items: end;
+  margin-right: 10px;
+  font-size: 25px;
+}

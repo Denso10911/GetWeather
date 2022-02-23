@@ -14,5 +14,5 @@ export const weatherAPI = {
     return instance.get(
       `data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&units=metric&appid=5421867f9d50d00be45654af1ffcc8f4`
     );
-  },
+  }
 };

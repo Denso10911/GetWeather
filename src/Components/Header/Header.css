@@ -6,10 +6,17 @@
   padding: 10px 30%;
   height: 30px;
 }
+.firstStartHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 27, 34);
+  padding: 10px 30%;
+  height: 30px;
+}
 
-.fullScreenLogo a {
+.firstStartLogo a {
   position: absolute;
-  transform: rotate(65deg);
   font-size: 90px;
   top: 320px;
   left: 650px;
@@ -26,6 +33,14 @@
   display: flex;
   gap: 10px;
 }
+.firstStartMenu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+
+}
+
 .menu__item.active {
   transition: all 0.5s ease;
   color: rgb(255, 166, 0);

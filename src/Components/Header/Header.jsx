@@ -6,13 +6,13 @@ const Header = (props) => {
   return (
     <div className={props.forecastType ? "firstStartHeader" : "header"}>
       <div className={props.forecastType ? "firstStartLogo" : "logo"}>
-        <NavLink to='day'>GetWeather</NavLink>
+        <NavLink to='/day'>GetWeather</NavLink>
       </div>
       <div className={props.forecastType ? "firstStartMenu" : "menu"}>
-        <NavLink to='day' className='menu__item'>
+        <NavLink to='/day' className='menu__item'>
           Daily
         </NavLink>
-        <NavLink to='week' className='menu__item' >
+        <NavLink to='/week' className='menu__item'>
           Week
         </NavLink>
       </div>

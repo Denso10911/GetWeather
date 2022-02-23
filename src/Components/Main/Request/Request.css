@@ -31,3 +31,23 @@
   padding: 0;
   border: none;
 }
+
+.request__error {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: rgb(195, 0, 0);
+  opacity: 1;
+  height: 10px;
+  transition: all 1s ease;
+}
+
+.request__error_none {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: rgb(195, 0, 0);
+  opacity: 0;
+  height: 0;
+  transition: all 1s ease;
+}

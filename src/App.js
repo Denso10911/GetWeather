@@ -5,16 +5,16 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
+import "./Media.css";
 
 function App() {
   const [forecastType, setforecastType] = useState(true);
 
-
   return (
     <BrowserRouter>
       <div className={cl.App}>
-        <Header forecastType={forecastType}/>
-        <Main setforecastType={setforecastType}/>
+        <Header forecastType={forecastType} />
+        <Main setforecastType={setforecastType} forecastType={forecastType} />
       </div>
     </BrowserRouter>
   );

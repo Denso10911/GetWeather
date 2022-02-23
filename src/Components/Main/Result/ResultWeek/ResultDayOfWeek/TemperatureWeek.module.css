@@ -2,25 +2,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-weight: bold; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .title {
   font-size: 30px;
   text-align: left;
-  margin-left: 10px;
 }
 
 .value {
   width: 100%;
-  font-size: 150px;
+  font-size: 80px;
   text-align: center;
   color: rgb(255, 138, 29);
+  padding-top: 10px;
+  line-height: 60px;
 }
-
 .feels {
   text-align: right;
   align-items: end;
-  margin-right: 10px;
-  font-size: 25px;
+  font-size: 20px;
 }

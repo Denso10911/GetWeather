@@ -22,6 +22,7 @@ const Main = (props) => {
             weatherInfoHourly={cityInfo.hourly}
             cityName={cityName}
             forecastType={props.forecastType}
+            opacityPage={props.opacityPage}
           />
         )}
       </div>

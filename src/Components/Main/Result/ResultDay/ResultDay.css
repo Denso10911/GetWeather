@@ -1,4 +1,4 @@
-.result__day{
+.result__day {
   color: rgb(0, 0, 0);
 }
 
@@ -7,7 +7,7 @@
   justify-content: space-between;
   width: 100%;
   gap: 20px;
-  padding: 5px 40px;
+  padding: 5px 3%;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.459);
 }

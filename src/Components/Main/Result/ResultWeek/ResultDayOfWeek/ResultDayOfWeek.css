@@ -7,8 +7,6 @@
   padding: 10px;
   box-sizing: border-box;
   color: black;
-  font-weight: bold;
-  
 }
 
 .result__data {
@@ -16,25 +14,6 @@
   width: 100%;
   margin-bottom: 10px;
   font-size: 1em;
-}
-
-.result__temperature {
-  border-radius: 20px;
-  color: rgb(255, 145, 0);
-  background-color: rgba(255, 255, 255, 0.568);
-  font-weight: bold;
-  padding: 5px 0;
-}
-
-.result__temperature_now {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.result__temperature_feels p {
-  padding: 0;
-  margin: 0;
-  font-size: 10px;
 }
 
 .result__weatherIcon {

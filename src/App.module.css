@@ -1,9 +1,10 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   color: #fffffe;
   background-color: rgb(13, 17, 23);
   font-family: "Jost", sans-serif;
+  overflow: hidden;
 }
 
 body a {

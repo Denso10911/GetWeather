@@ -1,12 +1,31 @@
+.request {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.request_title h1 {
+  display: flex;
+  width: 100%;
+  font-size: 9vw;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
 .request__form {
   display: flex;
+  margin-left: auto;
   justify-content: space-between;
-  width: 250px;
-  margin: 0 auto;
+  width: 500px;
   background-color: rgb(53, 52, 52);
-  padding: 8px;
+  padding: 20px;
   border-radius: 50px;
-  position: relative;
   z-index: 1;
 }
 
@@ -17,7 +36,8 @@
   box-sizing: border-box;
   color: rgb(255, 255, 255);
   padding-left: 10px;
-  font-size: 15px;
+  font-size: 40px;
+  font-family: "Jost", sans-serif;
 }
 
 .request__input:focus-visible {
@@ -26,20 +46,22 @@
 
 .request__btn {
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 2em;
+  height: 2em;
   padding: 0;
   border: none;
+  font-size: 30px;
 }
 
 .request__error {
   display: block;
   width: 100%;
-  text-align: center;
+  text-align: right;
   color: rgb(195, 0, 0);
   opacity: 1;
   height: 10px;
-  transition: all 1s ease;
+  transition: height 0.5s ease;
+  font-size: 30px;
 }
 
 .request__error_none {
@@ -50,4 +72,10 @@
   opacity: 0;
   height: 0;
   transition: all 1s ease;
+}
+
+@media screen and (min-width: 1600px) {
+  .request_title h1 {
+    font-size: 145px;
+  }
 }

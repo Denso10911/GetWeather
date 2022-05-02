@@ -1,7 +1,7 @@
 import React from "react";
 
 const Temperature = (props) => {
-let {temp, title, value, feels} = props.style
+  let { temp, title, value, feels } = props.style;
 
   return (
     <div className={temp}>

@@ -1,0 +1,34 @@
+.result__day {
+  color: rgb(255, 255, 255);
+}
+
+.result__day_temp {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 5px 3%;
+  box-sizing: border-box;
+  background-color: rgb(35, 41, 50);
+  box-shadow: 0 0 10px 30px rgb(35, 41, 50);
+}
+
+.result__day_params {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .result__day_temp {
+    flex-direction: column;
+    background-color: inherit;
+    box-shadow: none;
+    height: 100% !important;
+  }
+  .result__day_params {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+}

@@ -1,33 +1,48 @@
+// library
 import React from "react";
-import cl from './Header.module.css'
-import './ForecastType.css'
+import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+// styles
+import "./Header.css";
 
-const Header = (props) => {   
-  
+const headerVariants = {
+  hidden: {
+    y: -100,
+  },
+  visible: {
+    y: 0,
+    transition: {
+      type: "spring",
+      mass: 1,
+      damping: 20,
+    },
+  },
+  exit: {
+    y: -100,
+  },
+};
+const Header = (props) => {
+  return (
+    <motion.div
+      className='header'
+      variants={headerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
+      <div className='logo'>
+        <NavLink to='/GetWeather'>GetWeather</NavLink>
+      </div>
+      <div className='menu'>
+        <NavLink to='/day' className='menu__item'>
+          Daily
+        </NavLink>
+        <NavLink to='/week' className='menu__item'>
+          Week
+        </NavLink>
+      </div>
+    </motion.div>
+  );
+};
 
-  const handleClick = (e) => {
-    e.target.innerHTML === 'Daily' ? props.setforecastType(true) :  props.setforecastType(false)
-  }
-
-    return (
-      <div className={cl.header}>
-        <div className={cl.logo}>
-            <a href="/">
-                <img src="https://www.pinclipart.com/picdir/big/41-414567_simple-weather-icons-sunny-sunny-weather-icon-png.png" alt="" />
-            </a>            
-        </div>
-        <div className="menu">
-          <ul className={cl.menu__list} onClick={(e)=>{handleClick(e)}}>
-            <li className={`menu__item ${props.forecastType && 'active'}`}>
-               <button href='/daily'>Daily</button>
-            </li>
-            <li className={`menu__item ${!props.forecastType && 'active'}`}>
-              <button href ='/week'>Week</button>
-            </li>
-          </ul>
-        </div>
-    </div> 
-    )
-}
-
-export default Header
+export default Header;

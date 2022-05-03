@@ -1,41 +1,118 @@
-import axios from "axios";
+// library
 import React, { useState } from "react";
-import './Request.css'
+import { motion } from "framer-motion";
+import { Formik, Field, Form } from "formik";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
+// components
+import { weatherAPI } from "../../../API/api";
+// styles
+import "./Request.css";
+
+const titleVariants = {
+  hidden: {
+    y: -200,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      mass: 1,
+      damping: 8,
+    },
+  },
+  exit: {
+    y: -200,
+    opacity: 0,
+  },
+};
+
+const formVariants = {
+  hidden: {
+    y: 200,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      mass: 1,
+      damping: 8,
+    },
+  },
+  exit: {
+    y: 200,
+    opacity: 0,
+  },
+};
 
 const Request = (props) => {
-    const [cityNameInput, setCityNameInput] = useState('')
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-    const cityValue = (e) => {
-        setCityNameInput(e.target.value)
-    }
+  return (
+    <div className='request'>
+      <motion.div
+        className='request_title'
+        variants={titleVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+      >
+        <h1>Get Weather</h1>
+      </motion.div>
+      <motion.div
+        variants={formVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+      >
+        <Formik
+          initialValues={{
+            cityName: "",
+          }}
+          onSubmit={async (values, { resetForm }) => {
+            try {
+              let responseLoc = await weatherAPI.getLocation(values.cityName);
+              props.setCityName(responseLoc.data[0].name);
+              let responseWeather = await weatherAPI.getWeather(
+                responseLoc.data[0].lat,
+                responseLoc.data[0].lon
+              );
+              props.setCityInfo(responseWeather.data);
+              props.setforecastType(false);
+              setError("");
+              navigate("/day");
+              resetForm();
+            } catch (err) {
+              setError(err);
+            }
+          }}
+        >
+          <Form className='request__form'>
+            <Field
+              id='cityName'
+              className='request__input'
+              name='cityName'
+              placeholder="Let's find some city"
+              autocomplete='off'
+              autofocus='true'
+            />
 
-    const getCityRequest = async (cityNameInput) => {
-        setCityNameInput('')
-        let responseLoc = await axios
-            .get(`https://api.openweathermap.org/geo/1.0/direct?q=${cityNameInput}&limit=1&appid=5421867f9d50d00be45654af1ffcc8f4`)
-            
-        props.setCityName(responseLoc.data[0].name)
-        let responseWeather = await axios
-            .get(`https://api.openweathermap.org/data/2.5/onecall?lat=${responseLoc.data[0].lat}&lon=${responseLoc.data[0].lon}&exclude=minutely&units=metric&appid=5421867f9d50d00be45654af1ffcc8f4`)
-        props.setCityInfo(responseWeather.data)
-       }    
+            <button type='submit' className='request__btn'>
+              <FontAwesomeIcon icon='fa-solid fa-bolt' />
+            </button>
+          </Form>
+        </Formik>
+      </motion.div>
 
-    return (
-        <div className="request">
-            <div className="request__title">
-                <h3 >
-                    Enter the city:
-                </h3>
-            </div>
-           <div className="request__input">
-               <input type="text" onChange={cityValue} value={cityNameInput}/>
-           </div>
-           <div className="request__button">
-               <button onClick={()=>getCityRequest(cityNameInput)}>
-                   Get
-               </button>
-           </div>
-        </div>
-    )
-}
-export default Request
+      <div className={error ? "request__error" : "request__error_none"}>
+        we can't find this city, try again
+      </div>
+    </div>
+  );
+};
+export default Request;

@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(22, 27, 34);
+  padding: 10px 30%;
+  height: 30px;
+}
+.firstStartHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 27, 34);
+  padding: 10px 30%;
+  height: 30px;
+}
+
+.firstStartLogo a {
+  position: absolute;
+  font-size: 90px;
+  top: 320px;
+  left: 650px;
+  font-weight: bold;
+}
+
+.logo a {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+}
+.firstStartMenu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.menu__item {
+  transition: all 0.2s ease;
+}
+
+.menu__item.active {
+  color: rgb(255, 166, 0);
+}
+
+.menu__item:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1280px) {
+  .header {
+    padding: 10px 10%;
+  }
+}

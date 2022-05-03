@@ -1,0 +1,14 @@
+.cityName {
+  color: white;
+  font-size: 10vw;
+  text-align: center;
+}
+
+.cityName a {
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.cityName a:hover {
+  transform: scale(1.1);
+}

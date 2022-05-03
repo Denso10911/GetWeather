@@ -1,0 +1,8 @@
+.result__day_data {
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,6 @@
+.result__weatherTimeLapse {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 30px 0;
+}

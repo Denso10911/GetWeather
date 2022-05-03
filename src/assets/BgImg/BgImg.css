@@ -1,0 +1,75 @@
+.bgImg {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.Rain::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(2px); /* Размытие */
+  background-image: url(./Rain.jpg);
+  background-size: cover;
+  transition: all 1s ease;
+  
+}
+
+.Clouds::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(5px); /* Размытие */
+  /* transition: all 1s ease; */
+  background-image: url(./Clouds.jpg);
+  background-size: cover;
+}
+.Snow::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(2px); /* Размытие */
+  transition: all 1s ease;
+  background-image: url(./Snowing.jpeg);
+  background-size: cover;
+}
+.Clear::before {
+  content: "";
+  position: fixed; /* Фиксируем на одном месте */
+  left: 0;
+  right: 0; /* Вся ширин */
+  top: 0;
+  bottom: 0; /* Вся высота */
+  z-index: -1; /* Фон ниже текста */
+  filter: blur(2px); /* Размытие */
+  transition: all 1s ease;
+  background-image: url(./Sun.jpg);
+  background-size: cover;
+}
+
+.line {
+  position: fixed;  
+  background-color: rgba(255, 255, 255, 0.39); 
+}
+
+.daily {
+  width: 30vw;
+  height: 200vh;
+  right: 0;
+  top: -10vh;
+  border-top: 5px solid #000;
+  transform: rotate(10deg);  
+}
+ 

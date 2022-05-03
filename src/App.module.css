@@ -1,13 +1,23 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    color: #fffffe;
-    background-color: #0f0e17;
-    font-family: Trebuchet, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  color: #fffffe;
+  background-color: rgb(13, 17, 23);
+  font-family: "Jost", sans-serif;
+  overflow-x: hidden;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 body a {
-    color: #fffffe;
-    text-decoration: none;    
+  color: #fffffe;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }

@@ -29,6 +29,15 @@
   position: relative;
   z-index: 1;
 }
+
+.logo {
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
 .menu {
   display: flex;
   gap: 10px;
@@ -38,14 +47,22 @@
   justify-content: center;
   gap: 20px;
   font-size: 20px;
+}
 
+.menu__item {
+  transition: all 0.2s ease;
 }
 
 .menu__item.active {
-  transition: all 0.5s ease;
   color: rgb(255, 166, 0);
 }
 
 .menu__item:hover {
-  text-shadow: 0px 0px 5px rgba(255, 145, 0, 0.445);
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1280px) {
+  .header {
+    padding: 10px 10%;
+  }
 }

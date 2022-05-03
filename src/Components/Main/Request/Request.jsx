@@ -84,9 +84,9 @@ const Request = (props) => {
               );
               props.setCityInfo(responseWeather.data);
               props.setforecastType(false);
-              resetForm();
               setError("");
               navigate("/day");
+              resetForm();
             } catch (err) {
               setError(err);
             }
@@ -99,6 +99,7 @@ const Request = (props) => {
               name='cityName'
               placeholder="Let's find some city"
               autocomplete='off'
+              autofocus='true'
             />
 
             <button type='submit' className='request__btn'>

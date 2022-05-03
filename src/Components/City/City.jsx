@@ -1,6 +1,8 @@
 // library
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 // styles
 import "./City.css";
 
@@ -39,7 +41,7 @@ const City = (props) => {
       animate='visible'
       exit='exit'
     >
-      {props.cityName}
+      <Link to='GetWeather'>{props.cityName}</Link>
     </motion.div>
   );
 };

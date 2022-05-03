@@ -4,13 +4,18 @@
   flex-direction: column;
   gap: 5px;
   font-size: 20px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .weatherTimeLapse__item_icon {
-  background-color: rgba(0, 0, 0, 0.226);
+  background-color: rgba(255, 255, 255, 0.226);
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.226);
   height: 50px;
   width: 50px;
+}
+@media screen and (max-width: 1200px) {
+  .weatherTimeLapse__item {
+    font-size: 15px;
+  }
 }

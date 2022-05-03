@@ -2,11 +2,11 @@
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  background-color: rgba(233, 233, 233, 0.568);
+  background-color: rgb(35, 41, 50);
   border-radius: 20px;
   padding: 10px;
   box-sizing: border-box;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .result__data {

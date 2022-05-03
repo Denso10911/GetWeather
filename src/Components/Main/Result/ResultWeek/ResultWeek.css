@@ -1,8 +1,9 @@
 .result__items {
-  display: flex;
+  display: grid;
   width: 80%;
+  grid-template-columns: repeat(4, 200px);
+  justify-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   margin: 0 auto;
   gap: 20px;
   padding-bottom: 20px;
@@ -11,4 +12,17 @@
 .result__item {
   box-sizing: border-box;
   width: 200px;
+}
+
+@media screen and (max-width: 900px) {
+  .result__items {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(2, 200px);
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
 }
